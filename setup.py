@@ -123,7 +123,9 @@ setup(name='wstool',
       },
       # tests_require automatically installed when running python setup.py test
       tests_require=test_required,
-      scripts=["scripts/wstool"],
+      entry_points = {
+        'console_scripts': ['wstool=wstool.wstool_cli:main']
+      },
       author="Tully Foote",
       author_email="tfoote@osrfoundation.org",
       url="http://wiki.ros.org/wstool",
