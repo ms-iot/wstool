@@ -110,7 +110,9 @@ setup(name='wstool',
       cmdclass=cmdclass,
       # rosinstall dependency to be kept in order not to break ros hydro install instructions
       install_requires=install_requires,
-      scripts=["scripts/wstool"],
+      entry_points = {
+        'console_scripts': ['wstool=wstool.wstool_cli:main']
+      },
       author="Tully Foote",
       author_email="tfoote@osrfoundation.org",
       url="http://wiki.ros.org/wstool",
