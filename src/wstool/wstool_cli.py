@@ -193,8 +193,8 @@ def main():
         from .common import MultiProjectException
         sys.exit(wstool_main(sys.argv))
     except ImportError as exc:
-        sys.exit("ERROR: Cannot find required rosinstall library version, \
-    check your installation (also of vcstools) is up-to-date. One frequent cause \
-    is that rosinstall 0.5 is still installed in /usr/local/lib.\n%s" % exc)
+        sys.exit("ERROR: Cannot find required rosinstall library version, "
+                 "check your installation (also of vcstools) is up-to-date. One frequent cause "
+                 "is that rosinstall 0.5 is still installed in /usr/local/lib.\n%s" % exc)
     except MultiProjectException as mpe:
         sys.exit("ERROR in config: %s" % str(mpe))
